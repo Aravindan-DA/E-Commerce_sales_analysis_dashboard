@@ -1,27 +1,28 @@
 🛒 E-Commerce Sales Data Analytics DashboardAn interactive Data Analytics Dashboard built to visualize performance metrics, sales trends, platform efficiency, shipping dynamics, and profitability across global markets.
 
-📌 Project OverviewThis project processes raw transactional data to provide executive-level visibility into e-commerce operations. By leveraging DAX measures and dynamic visuals, the dashboard helps stakeholders understand revenue drivers, optimize fulfillment logistics, and identify high-value customer locations.
+📌 Project Overview:
+  This project processes raw transactional data to provide executive-level visibility into e-commerce operations. By leveraging DAX measures and dynamic visuals, the dashboard helps stakeholders understand revenue drivers, optimize fulfillment logistics, and identify high-value customer locations.
 
 🧮 DAX Measures UsedHere are the core DAX formulas implemented to build dynamic calculations and KPIs across the dashboard:
 
-Code snippet// 
+Code snippet
 
 1. Total Orders
 Total Orders = COUNTROWS('Sales_Data')
 
-// 2. Total Sales / Revenue
+2. Total Sales / Revenue
 Total Revenue = SUMX('Sales_Data', 'Sales_Data'[Quantity] * 'Sales_Data'[Item_Price])
 
-// 3. Units Sold
+3. Units Sold
 Units Sold = SUM('Sales_Data'[Quantity])
 
-// 4. Total Cost
+4. Total Cost
 Total Cost = SUM('Sales_Data'[Product_Cost])
 
-// 5. Total Gross Profit
+5. Total Gross Profit
 Total Gross Profit = [Total Revenue] - [Total Cost]
 
-// 6. Profit Margin %
+6. Profit Margin %
 Profit Margin % = DIVIDE([Total Gross Profit], [Total Revenue], 0)
 
 
